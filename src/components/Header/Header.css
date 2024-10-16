@@ -1,0 +1,59 @@
+/* Container for the entire header section */
+.headBox {
+    display: flex;
+    justify-content: space-between; /* Ensures space between items (button, menu, logo) */
+    align-items: center; /* Vertically aligns items in the center */
+    padding: 10px 20px;
+    background-color: #083241eb; /* Light background color for the header */
+  }
+  
+  /* Styling for the logo */
+  .logo img {
+    height: 50px; /* Adjust the height of the logo */
+    width: auto; /* Keep the aspect ratio */
+  }
+  
+  /* Container for the menu list */
+  .menuList {
+    display: flex; /* Flexbox to align the menu items horizontally */
+    list-style-type: none; /* Remove default list bullets */
+    justify-content: center; /* Center the menu items horizontally */
+    flex-grow: 1; /* Make the menu take the available space */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styling for individual menu items */
+  .menuList li {
+    margin: 0 20px; /* Add spacing between the menu items */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  /* Change color on hover for menu items */
+  .menuList li:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+  /* Container for the button */
+  .FreeBtn {
+    order: 1; /* Ensures the button is on the left */
+  }
+  
+  /* Styling for the button */
+  .FreeBtn button {
+    padding: 10px 20px;
+    background-color: #0676bc; /* Green background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Change background color on hover for the button */
+  .FreeBtn button:hover {
+    background-color: #2bd8ff; /* Darker green on hover */
+  }
+  

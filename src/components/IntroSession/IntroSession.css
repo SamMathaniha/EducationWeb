@@ -1,0 +1,77 @@
+/* Main container for the intro section, now covering full screen */
+.introbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full-screen height */
+    background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+    padding: 0 20px;
+  }
+  
+  /* Container for the text and image */
+  .intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    color: white; /* Text color */
+  }
+  
+  /* Text section on the left */
+  .text-section {
+    max-width: 50%;
+  }
+  
+  .text-section h1 {
+    font-size: 48px;
+    color: white; /* White color for heading */
+    margin-bottom: 20px;
+  }
+  
+  .text-section h4 {
+    font-size: 20px;
+    color: #ddd; /* Lighter color for description */
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  /* Button group styling */
+  .button-group {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .primary-btn, .secondary-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .primary-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .primary-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .secondary-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Image section on the right */
+  .image-section img {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 20px;
+  }
+  

@@ -1,9 +1,13 @@
 import React from "react";
 
+import IntroSession from "./components/IntroSession/IntroSession";
+import Header from "./components/Header/Header";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="header">Hello</h1>
+    <div className="App">
+      <Header />
+      <IntroSession />
     </div>
   );
 };
