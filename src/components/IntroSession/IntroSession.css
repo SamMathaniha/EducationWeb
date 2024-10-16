@@ -1,77 +1,138 @@
-/* Main container for the intro section, now covering full screen */
+/* Main container for the intro section, covering most of the screen */
 .introbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh; /* Full-screen height */
-    background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
-    padding: 0 20px;
-  }
-  
-  /* Container for the text and image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* Full-screen height */
+  background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+  padding: 0 20px;
+}
+
+/* Container for the text and image */
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  color: white; /* Text color */
+}
+
+/* Text section on the left */
+.text-section {
+  max-width: 50%;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  color: white; /* White color for heading */
+  margin-bottom: 20px;
+}
+
+.text-section h4 {
+  font-size: 20px;
+  color: #ddd; /* Lighter color for description */
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.primary-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Image section on the right */
+.image-section img {
+  max-width: 100%;
+  height: 600px;
+  border-radius: 20px;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
   .intro-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    color: white; /* Text color */
+      flex-direction: column; /* Stack text and image vertically */
+      text-align: center; /* Center-align the text */
   }
-  
-  /* Text section on the left */
+
   .text-section {
-    max-width: 50%;
+      max-width: 100%; /* Full width for text on smaller screens */
   }
-  
+
   .text-section h1 {
-    font-size: 48px;
-    color: white; /* White color for heading */
-    margin-bottom: 20px;
+      font-size: 36px; /* Adjust heading size for tablets */
   }
-  
+
   .text-section h4 {
-    font-size: 20px;
-    color: #ddd; /* Lighter color for description */
-    margin-bottom: 30px;
-    line-height: 1.5;
+      font-size: 18px; /* Adjust paragraph size for tablets */
   }
-  
-  /* Button group styling */
-  .button-group {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .primary-btn, .secondary-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .primary-btn {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .primary-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .secondary-btn {
-    background-color: #6c757d;
-    color: white;
-  }
-  
-  .secondary-btn:hover {
-    background-color: #5a6268;
-  }
-  
-  /* Image section on the right */
+
   .image-section img {
-    max-width: 100%;
-    height: 600px;
-    border-radius: 20px;
+      height: 300px; /* Adjust image size for tablets */
+      margin-top: 20px;
   }
-  
+
+  .button-group {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px;
+      align-items: center;
+  }
+
+  .primary-btn, .secondary-btn {
+      width: 100%; /* Full width buttons for tablets */
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .introbox {
+      height: auto; /* Allow for full content display */
+      padding: 20px; /* Add padding for small screens */
+  }
+
+  .text-section h1 {
+      font-size: 28px; /* Further reduce heading size */
+  }
+
+  .text-section h4 {
+      font-size: 16px; /* Adjust description size */
+  }
+
+  .image-section img {
+      height: 200px; /* Smaller image size for mobile */
+  }
+
+  .primary-btn, .secondary-btn {
+      font-size: 14px; /* Reduce button text size */
+      padding: 10px; /* Adjust padding for buttons */
+  }
+}
