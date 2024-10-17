@@ -1,11 +1,12 @@
 import React from "react";
 import "./Header.css";
+import Logo from "../../assets/logo/LogoHead.PNG";
 
 const Header = () => {
   return (
     <div className="headBox">
       <div className="logo">
-        <img src="" alt="Sam_Institute" />
+        <img src={Logo} alt="Sam_Institute" />
       </div>
       <div className="menuList">
         <li>Home</li>
